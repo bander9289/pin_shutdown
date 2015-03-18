@@ -14,7 +14,7 @@ def __main__():
       
       # shutdown now! (about to lose power)
       if(GPIO.input(SHUTDOWN_GPIO) == False):
-      print "Shutdown pin event! Shutdown in ~20 seconds ...."
+          print "Shutdown pin event! Shutdown in ~20 seconds ...."
           os.system("sync")
           time.sleep(20)
   
