@@ -14,15 +14,15 @@ def __main__():
       
       # shutdown now! (about to lose power)
       if(GPIO.input(SHUTDOWN_GPIO) == False):
-      	print "Shutdown pin event! Shutdown in ~20 seconds ...."
+      print "Shutdown pin event! Shutdown in ~20 seconds ...."
           os.system("sync")
-  	time.sleep(20)
+          time.sleep(20)
   
-      	if(GPIO.input(SHUTDOWN_GPIO) == False):
-              os.system("sync; poweroff")
-              break;
+      if(GPIO.input(SHUTDOWN_GPIO) == False):
+          os.system("sync; poweroff")
+          break;
   
-  	print "Canceling shutdown since ignition is back on"
+      print "Canceling shutdown since ignition is back on"
 
 if __name__ == '__main__':
-  __main__()
+    __main__()
