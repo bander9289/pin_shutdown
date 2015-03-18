@@ -19,7 +19,7 @@ def __main__():
   	time.sleep(20)
   
       	if(GPIO.input(SHUTDOWN_GPIO) == False):
-              os.system("sync; sudo shutdown -h now")
+              os.system("sync; poweroff")
               break;
   
   	print "Canceling shutdown since ignition is back on"
